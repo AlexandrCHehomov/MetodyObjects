@@ -36,5 +36,5 @@ public class Author {
         Author Pushkin = (Author) other;
         return lastname.equals(Pushkin.lastname);
     }
-
+//
 }

@@ -47,6 +47,6 @@ public class Book {
         Book onebook = (Book) other;
         return nameBook.equals(onebook.nameBook);
     }
-
+//
 
 }
