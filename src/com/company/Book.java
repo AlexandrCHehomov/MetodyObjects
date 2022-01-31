@@ -45,8 +45,6 @@ public class Book {
             return false;
         }
         Book onebook = (Book) other;
-        return nameBook.equals(onebook.nameBook);
+        return nameBook.equals(onebook.nameBook) && fullName.equals(onebook.fullName);
     }
-//
-
 }

@@ -17,6 +17,6 @@ public class Main {
         //equals
         System.out.println(Pushkin.equals(Esenin));
         System.out.println(oneBook.equals(twoBook));
-        //
+        ///
     }
 }

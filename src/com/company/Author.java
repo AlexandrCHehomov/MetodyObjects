@@ -34,7 +34,6 @@ public class Author {
             return false;
         }
         Author Pushkin = (Author) other;
-        return lastname.equals(Pushkin.lastname);
+        return lastname.equals(Pushkin.lastname) && name.equals(Pushkin.name);
     }
-//
 }
