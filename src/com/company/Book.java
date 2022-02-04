@@ -7,11 +7,6 @@ public class Book {
     private final Author fullName;
 
     @Override
-    public int hashCode() {
-        return Objects.hash(nameBook, fullName, yearPublications);
-    }
-
-    @Override
     public String toString() {
             return "Название книги - " + this.nameBook + ", имя автора - " + this.fullName + ", дата публикации - " + this.yearPublications;
 
@@ -40,13 +35,16 @@ public class Book {
         this.yearPublications = yearPublications;
     }
 
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Book onebook = (Book) other;
-        return nameBook.equals(onebook.nameBook);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return yearPublications == book.yearPublications && nameBook.equals(book.nameBook) && fullName.equals(book.fullName);
     }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameBook, fullName, yearPublications);
+    }
 }
